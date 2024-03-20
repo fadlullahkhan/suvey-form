@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Survey Form</title>
+  </head>
+  <body>
+    <h1 id="title">Internet Usage Survey</h1>
+    <p id="description">
+      Thank you for participating in our survey! We appreciate your time to
+      provide valuable feedback. Please fill out this survey honestly and
+      truthfully.
+    </p>
+    <form id="survey-form" method="post">
+      <fieldset id="bio">
+        <label id="name-label" for="name"
+          >Name<input id="name" type="text" placeholder="John Doe" required
+        /></label>
+        <label id="email-label" for="email"
+          >Email
+          <input
+            id="email"
+            type="email"
+            placeholder="example@mail.com"
+            required
+        /></label>
+        <label id="number-label" for="number"
+          >Age
+          <input
+            id="number"
+            type="number"
+            placeholder="Years"
+            min="15"
+            max="90"
+            required
+        /></label>
+        <label id="gender-label" for="dropdown"
+          >Gender
+          <select name="gender" id="dropdown" required>
+            <option value="">Select Gender</option>
+            <option value="1">Male</option>
+            <option value="2">Female</option>
+          </select>
+        </label>
+      </fieldset>
+      <fieldset id="survey">
+        <legend>How long do you use the internet every day?</legend>
+        <label class="radio-label" for="less-one">
+          <input type="radio" name="hour" id="less-one" value="1" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">&lt; 1 Hour</span>
+        </label>
+        <label class="radio-label" for="one-two">
+          <input type="radio" name="hour" id="one-two" value="2" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">1 - 2 Hours</span>
+        </label>
+        <label class="radio-label" for="two-three">
+          <input type="radio" name="hour" id="two-three" value="3" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">2 - 3 Hours</span>
+        </label>
+        <label class="radio-label" for="three-four">
+          <input type="radio" name="hour" id="three-four" value="4" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">3 - 4 Hours</span>
+        </label>
+        <label class="radio-label" for="four-five">
+          <input type="radio" name="hour" id="four-five" value="5" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">4 - 5 Hours</span>
+        </label>
+        <label class="radio-label" for="more-five">
+          <input type="radio" name="hour" id="more-five" value="6" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">&gt; 5 Hours</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Where do you access the internet most often?</legend>
+        <label class="radio-label" for="home">
+          <input type="radio" name="place" id="home" value="1" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Home</span>
+        </label>
+        <label class="radio-label" for="office">
+          <input type="radio" name="place" id="office" value="2" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Office</span>
+        </label>
+        <label class="radio-label" for="school">
+          <input type="radio" name="place" id="school" value="3" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">School / Campus</span>
+        </label>
+        <label class="radio-label" for="cafe">
+          <input type="radio" name="place" id="cafe" value="4" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Cafe / Restaurant</span>
+        </label>
+        <label class="radio-label" for="public">
+          <input type="radio" name="place" id="public" value="5" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Public Places (parks, libraries, etc.)</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          What device do you use most often to access the internet?
+        </legend>
+        <label class="radio-label" for="smartphones">
+          <input type="radio" name="device" id="smartphones" value="1" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Smartphones</span>
+        </label>
+        <label class="radio-label" for="laptops">
+          <input type="radio" name="device" id="laptops" value="2" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Laptops</span>
+        </label>
+        <label class="radio-label" for="desktop">
+          <input type="radio" name="device" id="desktop" value="3" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Desktop Computer</span>
+        </label>
+        <label class="radio-label" for="tablet">
+          <input type="radio" name="device" id="tablet" value="4" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Tablet</span>
+        </label>
+        <label class="radio-label" for="tv">
+          <input type="radio" name="device" id="tv" value="5" />
+          <span class="radio-btn"><span class="radio"></span></span>
+          <span class="radio-text">Smart TV</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>
+          What activities do you do most often when using the internet?
+          <div class="rule">Select the 3 most relevant</div>
+        </legend>
+        <label class="checkbox-label" for="cb-1">
+          <input type="checkbox" name="usage" id="cb-1" value="1"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">Browse the web</span>
+        </label>
+        <label class="checkbox-label" for="cb-2">
+          <input type="checkbox" name="usage" id="cb-2" value="2"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">Using social media</span>
+        </label>
+        <label class="checkbox-label" for="cb-3">
+          <input type="checkbox" name="usage" id="cb-3" value="3"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text"
+            >Watch online videos (YouTube, Netflix, etc.)</span
+          >
+        </label>
+        <label class="checkbox-label" for="cb-4">
+          <input type="checkbox" name="usage" id="cb-4" value="4"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">online shop</span>
+        </label>
+        <label class="checkbox-label" for="cb-5">
+          <input type="checkbox" name="usage" id="cb-5" value="5"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">Read news online</span>
+        </label>
+        <label class="checkbox-label" for="cb-6">
+          <input type="checkbox" name="usage" id="cb-6" value="6"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">Play online games</span>
+        </label>
+        <label class="checkbox-label" for="cb-7">
+          <input type="checkbox" name="usage" id="cb-7" value="7"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text"
+            >Using Chatting Apps (WhatsApp, Line, etc.)</span
+          >
+        </label>
+        <label class="checkbox-label" for="cb-8">
+          <input type="checkbox" name="usage" id="cb-8" value="8"/>
+          <span class="checkbox-btn"
+            ><span class="checkbox">&#10004;</span></span
+          >
+          <span class="checkbox-text">Take online courses</span>
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Are there any additional suggestions or comments you would like to provide regarding your experience using the internet?</legend>
+        <textarea name="comments" id="comments" wrap="hard" cols="30" rows="5" placeholder="Type something..."></textarea>
+      </fieldset>
+      <button id="submit" type="submit">Submit</button>
+    </form>
+    <script>
+      const checkboxes = document.querySelectorAll('input[name="usage"]');
+      let selectedCbx = [];
+
+      for (const cbx of checkboxes) {
+        cbx.addEventListener("change", (e) => {
+          if (e.target.checked === true) {
+            selectedCbx.push(e.target);
+            if (selectedCbx.length > 3) {
+              selectedCbx[0].checked = false;
+              selectedCbx.splice(0, 1);
+            }
+          } else {
+            let i = selectedCbx.indexOf(e.target);
+            selectedCbx.splice(i, 1);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
